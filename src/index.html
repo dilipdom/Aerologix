@@ -1,42 +1,100 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Aerologix - Any Drone Anywhere</title>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:300' rel='stylesheet' type='text/css'>
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> -->
+  <link href='https://fonts.googleapis.com/css?family=Poppins:300' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
 
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167249183-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-167249183-1');
+  </script>
+  <!--  Open Graphics Protocol  -->
+  <meta property="og:title" content="Aerologix - Any Drone Anywhere" />
+  <meta property="og:url" content="https://www.aerologix.com/" />
+  <meta property="og:description"
+    content="Aerologix is a one-stop global platform for drone data on-demand for customers to get actionable insights. " />
+  <meta property="og:type" content="Website" />
+  <meta property="og:image" content="https://ibb.co/XCgh8bt" />
+  <meta property="og:site_name:" content="Aerologix" />
+  <!--  Open Graphics Protocol End -->
+
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root><style>
-    app-root {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-  
-      color: white;
-      text-transform: uppercase;
-      font-family: -apple-system,
+  <!-- Schema.org Start -->
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+    
+      "@type": "Organization",
+    
+      "name": "Aerologix pty Ltd",
+    
+      "alternateName": "Aerologix",
+    
+      "url": "https://www.aerologix.com/",
+    
+      "logo": "https://ibb.co/CJVfbr8",
+    
+      "sameAs": [
+    
+        "https://www.facebook.com/aerologix",
+    
+        "https://www.instagram.com/aerologix/",
+    
+        "https://twitter.com/Aerologix_Aus",
+    
+        "https://www.linkedin.com/company/aerologix"
+    
+      ]
+    
+    }
+    
+    </script>
+
+
+  <app-root>
+    <style>
+      app-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        color: white;
+        text-transform: uppercase;
+        font-family: -apple-system,
           BlinkMacSystemFont,
           "Segoe UI",
           Roboto,
@@ -45,35 +103,41 @@
           Cantarell,
           Helvetica,
           sans-serif;
-      font-size: 2.5em;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    }
-    body {
-      background: black;
-      margin: 0;
-      padding: 0;
-    }
-  
-    @keyframes dots {
-      50% {
-        transform: translateY(-.4rem);
+        font-size: 2.5em;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
       }
-      100% {
-        transform: translateY(0);
+
+      body {
+        background: black;
+        margin: 0;
+        padding: 0;
       }
-    }
-  
-    .d {
-      animation: dots 1.5s ease-out infinite;
-    }
-    .d-2 {
-      animation-delay: .5s;
-    }
-    .d-3 {
-      animation-delay: 1s;
-    }
+
+      @keyframes dots {
+        50% {
+          transform: translateY(-.4rem);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .d {
+        animation: dots 1.5s ease-out infinite;
+      }
+
+      .d-2 {
+        animation-delay: .5s;
+      }
+
+      .d-3 {
+        animation-delay: 1s;
+      }
     </style>
-  
-    Loading...<span class="d">.</span><span class="d d-2">.</span><span class="d d-3">.</span></app-root>
+
+    Loading...<span class="d">.</span><span class="d d-2">.</span><span class="d d-3">.</span>
+  </app-root>
 </body>
+
 </html>
