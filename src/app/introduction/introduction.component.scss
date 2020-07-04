@@ -1,0 +1,181 @@
+@import "~sass/main.scss";
+
+.video-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.bigData {
+  font-family: "Helvetica", sans-serif;
+  font-size: calc(30px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bold;
+}
+
+.header1 {
+  height: 70rem;
+  width: 100%;
+  position: relative;
+}
+
+// .bgVideo {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   // if we don't specify height and width here, they will occupy the content of child element, so 100% h & w on child will not work !!!
+//   height: 100%;
+//   width: 100%;
+//   z-index: -1;
+//   &__Content {
+//     height: 100%;
+//     width: 100%;
+//     // only use height and width to make video to cover will not work, because of the original ratio of the video, object-fit will make html element like img and video to cover the full width and height like we want
+//     object-fit: cover;
+//   }
+// }
+
+.headingL {
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  font-size: 5rem;
+  @include respond(tab-land) {
+    left: 12.5rem;
+    font-size: 3rem;
+  }
+  @include respond(tab-port) {
+    left: 10rem;
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    left: 5rem;
+    font-size: 3rem;
+  }
+  h1 {
+    animation: moveInTopLeft 1.5s;
+    font-size: calc(60px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      font-size: 16px;
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.addLine {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.001em solid #ffffff;
+  margin: 0.4vw 8.75vw 0.75vw 8.75vw;
+}
+
+.addThickLine {
+  background: #000000 0% 0% no-repeat padding-box;
+  border: 1px solid #000000;
+  // margin: 1.5vw 42.75vw 1.75vw 42.75vw;
+  margin: 2.5rem 44.75vw 2.75vw 44.75vw;
+  border-radius: 1px;
+  opacity: 1;
+
+  @include respond(phone){
+    margin: 1.5em 39.75vw 4.75vw 40.75vw;
+  }
+  // width: 2vw;
+}
+
+// body {
+//   background-color: #ce3635;
+//   text-align: center;
+//   color: #fff;
+//   padding-top: 10em;
+//   font: bold 24px/45px Helvetica, Sans-Serif;
+// }
+
+h1 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 17px !important;
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    font-size: 30px !important;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    font-size: 40px !important;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) and (max-width : 1440px){
+    font-size: 40px !important;
+  }
+
+  @media (min-width: 1440px){
+    font-size: 50px !important;
+  }
+}
+
+h6 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 0.5rem !important;
+  max-width: fit-content;
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    font-size: 0.75rem !important;
+    max-width: fit-content;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    font-size: 1rem !important;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    font-size: 1rem !important;
+  }
+}
+
+.content {
+  font-size: 1.25vw;
+  font-family: Arial, Helvetica, sans-serif;
+  @include respond(tab-port) {
+    font-size: 2.7vw;
+    letter-spacing: 0.7px !important;
+    margin-top: 1px !important;
+  }
+}
+
+.letterSpacing {
+  font: Regular 35px/60px Helvetica;
+  margin-left: 3vw;
+  letter-spacing: 0.25vw;
+  text-align: center;
+
+  @media (min-width: 1200px) and (max-width:1440px) {
+    margin-left: 1vw;
+  }
+
+  @media (min-width: 1440px) and (max-width:2000px) {
+    margin-left: 5vw;
+  }
+}
+
+.typeAlign {
+  display: block;
+  margin-left: 2.7vw;
+  @include respond(big-desktop) {
+    margin-left: -1.3vw !important;
+  }
+
+  @include respond(phone and tab-land) {
+    margin-left: 3.2vw !important;
+  }
+}

@@ -1,0 +1,91 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin myButton($width, $fontSize) {
+  display: inline-block;
+  font-size: $fontSize;
+  text-decoration: none;
+  width: $width;
+  @content;
+  margin: 0 auto 10rem;
+  border: 0;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  background-color: #096dd9;
+  color: white;
+  //   width: 335px;
+  //   height: 50px;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    box-shadow: 0 2rem 4rem rgba(#096dd9, 0.4);
+    transform: translateY(-3px);
+  }
+  &:active {
+    box-shadow: 0 1rem 2rem rgba(#096dd9, 0.4);
+    transform: translateY(-1px);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: 0 1rem 2rem rgba(#096dd9, 0.3);
+    transform: translateY(0);
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+  
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+  
+  ORDER: Base + typography > general layout + grid > page layout > components
+  
+  1em = 16px
+  */
+// we can pass argument in mixin, but @content let us pass a entire block of code
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // em and rem in media query will not be affected by the root font size we defined which is 10px, it's only related to the browser font-size (default 16px ) which can be changed by user, we use em here, since rem failed to work in some of the browsers tested by ..., and conclusion is that em is best for media queries
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}

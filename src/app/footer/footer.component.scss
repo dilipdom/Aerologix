@@ -1,0 +1,161 @@
+@import "~sass/main.scss";
+.bgC {
+    background-color: #eaeaea;
+}
+
+.lbg {
+    background-color: #070707;
+    height: 3rem;
+}
+
+// li {
+//   width: 100%;
+//   text-align: center;
+// }
+
+.lowText {
+    padding: 0.75rem 3px 0.25rem 0.5rem;
+    // font-family: "Arial, Helvetica, sans-serif !important;";
+    letter-spacing: 1.44px;
+    color: white;
+    @include respond(tab-port) {
+        padding: 0.5rem 5px 1px 0.5rem;
+        letter-spacing: 1px;
+        text-align: center !important;
+    }
+    @include respond(phone) {
+        padding: 0.5rem 5px 1px 0.5rem;
+        letter-spacing: 1px;
+        font-size: 3vw;
+        text-align: center !important;
+    }
+    @include respond(desktops) {
+        font-size: 2.5vw;
+    }
+}
+hr {
+    position: relative;
+    top: 0.5vw;
+    border: none;
+    height: 12px;
+    background: gray;
+    margin-bottom: 1vw;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-links li {
+    display: block;
+    padding-top: 5px;
+    letter-spacing: 2.44px;
+}
+.footer-links a {
+    color: black;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #096dd9;
+    text-decoration: none;
+}
+.footer-links.inline li {
+    display: inline-block;
+}
+
+.hfont {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.18rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: x-large;
+    // font-weight: 600;
+}
+
+.pFont {
+    // font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1.25rem;
+    // padding-top: 5px;
+    font-size: 0.8rem !important;
+    letter-spacing: 1.44px;
+    text-transform: none !important;
+    font-weight: bold;
+}
+
+.cssForMobile {
+    @include respond(phone) {
+        float: none !important;
+    }
+
+    @include respond(tab-port) {
+        float: none !important;
+    }
+}
+
+.footer2Align {
+    margin-right: 30px;
+    margin-bottom: 15px;
+    // text-align: left !important;
+    @include respond(tab-port) {
+        // margin: 1%;
+        // padding: 0.5rem 5px 1px 0.5rem;
+        // letter-spacing: 1px;
+        // text-align: center !important;
+    }
+    @include respond(phone) {
+        margin-right: 13px;
+        margin-bottom: 0rem !important;
+    }
+    @include respond(desktops) {
+        // font-size: 2.5vw;
+    }
+}
+
+.col-1 {
+    @include respond(phone) {
+        margin-right: 0px !important;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.col-md-2 {
+    @include respond(phone) {
+        margin-right: 0px !important;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.col-md-3 {
+    @include respond(phone) {
+        margin-right: 0px !important;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.zoomer {
+    transition: transform 0.2s;
+}
+
+.zoomer:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+.zoomPng {
+    padding: 6% 1%;
+    @include respond(tab-port) {
+        padding: 10% 0% !important;
+    }
+    @include respond(phone) {
+        padding: 0% 20% 3% 20% !important;
+    }
+    @media (min-width: 1025px) and (max-width: 1440px){
+        padding: 3% 3% !important;;
+    }
+    @include respond(big-desktop) {
+        padding: 2.5% !important;
+    }
+}

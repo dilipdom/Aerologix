@@ -1,0 +1,67 @@
+<nav #navbar class="navbar sticky-top navbar-expand-lg navbar-dark header-class">
+  <a href="/#">
+  <img src="assets/icons/whiteLogo.svg" class="alignLogo" alt="Aerologix Logo"/> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" id="navbarDropdownMenuLink-0" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">INDUSTRIES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-0">
+
+          <a [routerLink]="['/industries/realestate']" class="dropdown-item waves-light" (click)="closeLink()">Real Estate</a>
+          <a [routerLink]="['/industries/insurance']" class="dropdown-item waves-light" (click)="closeLink()">Insurance</a>
+          <a [routerLink]="['/industries/telecom']" class="dropdown-item" (click)="closeLink()">Telecommunications</a>
+          <a [routerLink]="['/industries/energy']" class="dropdown-item" (click)="closeLink()">Energy Services</a>
+          <a [routerLink]="['/industries/other']" class="dropdown-item" (click)="closeLink()">Other Industries</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" id="navbarDropdownMenuLink-1" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">SOLUTIONS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-1">
+          <a [routerLink]="['/solutions/aeropath']" class="dropdown-item" (click)="closeLink()">Aeropath 3D</a>
+          <a [routerLink]="['/solutions/live']" class="dropdown-item" (click)="closeLink()">Live Streaming</a>
+          <a [routerLink]="['/solutions/high']" class="dropdown-item" (click)="closeLink()">High Quality Images & Videos</a>
+          <a [routerLink]="['/solutions/vr']" class="dropdown-item" (click)="closeLink()">VR Environments With Matterport </a>
+          <a [routerLink]="['/solutions/othersolutions']" class="dropdown-item" (click)="closeLink()">Other</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" id="navbarDropdownMenuLink-2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">PILOTS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-2">
+          <a [routerLink]="['/solutions/other']" class="dropdown-item" (click)="closeLink()">Coming Soon</a>
+          <!-- <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/solutions/other']">ABOUT</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+
+        <form class="form-inline my-2 my-lg-0 ml-auto" style="margin-right: 1rem;">
+          <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn btn-sm align-middle btn-primary btn-md my-2 my-sm-0 ml-3 roundBorder" type="submit" (click)="goToLink()">
+            Log in</button>
+          <button class="btn btn-sm align-middle btn-primary btn-md my-2 my-sm-0 ml-3 roundBorder" type="submit" (click)="goToLink()">
+            Sign up</button>
+        </form>
+        <!-- <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <button class="btn align-middle btn-primary" type="button">Smaller button</button>
+          <a class="dropdown-item" href="#">Log In</a>
+          <a class="dropdown-item" href="#">Sign Up</a>
+        </div> -->
+      <!-- </li> -->
+    </ul>
+  </div>
+</nav>

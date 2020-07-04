@@ -1,0 +1,112 @@
+<section id="formSection">
+
+
+  <div class="">
+    <div class="row white-text" style="margin-right: auto;">
+      <div class="col-md-1"></div>
+      <div class="col-md-5 centreAlways rightALign">
+        <img src="assets/icons/appIcon.svg" class="img-fluid wIconAlign" alt="Aerologix icon">
+        <img src="assets/icons/whiteLogo.svg" class="img-fluid wLogoAlign" alt="Aerologix banner">
+
+        <article class="text-center textDeviceAlign">Our vision is to bring <b class="font-weight-bold"
+            style="font-size: large;">Customers</b> and
+          licensed <br>
+          <b class="font-weight-bold" style="font-size: large;">Drone operators in Australia</b> <br>
+          into this amazing platform
+        </article>
+      </div>
+
+      <!-- <div class="modal-body">
+        <input [(ngModel)]="name" #ctrl="ngModel">
+        {{name}}
+      </div> -->
+
+      <div class="col-md-5 centreAlways1">
+
+        <!-- Default form row -->
+        <form novalidate class="formPad" [formGroup]="myform">
+          <div class="form-row mt-3" style="margin-left: 0%;">
+            <button type="button" #zero
+              style="margin: 0px !important; width: 50%; line-height: 1.2 !important; font-size: 0.8vw;"
+              class="btn btn-light fontHel adjBtn" (click)=changeCustomerType(0)>Customer</button>
+            <button type="button" #one
+              style="margin: 0px !important; width: 49%;  line-height: 1.2 !important; font-size: 0.8vw;"
+              class="btn btn-primary fontHel adjBtn" (click)=changeCustomerType(1)>Pilot</button>
+          </div>
+
+
+          <!-- Grd row -->
+          <div class="form-row mt-3">
+            <!-- Grid column -->
+            <div class="col" 
+            
+            [ngClass]="{
+              'fas fa-asterik': name.invalid && (name.dirty || name.touched),
+              'check-circle': name.valid && (name.dirty || name.touched)
+            }"
+            
+            >
+              <!-- Default input -->
+              <input id=form1 type="text" class="form-control focusTextBox fontHel" placeholder="Name"
+              formControlName="name" required>
+              <div class="fontHel" *ngIf="name.errors && (name.dirty || name.touched)">
+                <p class="errorClass" *ngIf="name.errors.required">Name is required</p>
+              </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col">
+              <!-- Default input -->
+              <input mdbInput type="text" class="form-control focusTextBox fontHel specialAdjust" email formControlName="email"
+                placeholder="Email">
+                <div class="fontHel" *ngIf="(email.invalid && (email.dirty || email.touched))">
+                  <p class="errorClass">Invalid Email Address</p>
+                </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+
+          <div class="form-row mt-3" style="padding: 0 1% 0 1%;">
+            <select class="browser-default custom-select focusTextBox adjustCss" formControlName="interest">\
+              <option class="fontHel" style="padding: 10px;" value="">Please select from options</option>
+              <option class="fontHel" style="padding: 10px;" value="1">Register your interest</option>
+              <option class="fontHel" style="padding: 10px;" value="2">Waitlist for our Beta</option>
+            </select>
+            <div class="fontHel" *ngIf="(interest.invalid && (interest.dirty || interest.touched))">
+              <p class="errorClass">This is a mandatory field</p>
+            </div>
+          </div>
+
+          <div class="form-row mt-3">
+            <div class="textAreaBox">
+              <textarea class="textAreaBox__textAreaElement md-textarea form-control fontHel" onChange=""
+                formControlName="description" value=""
+                placeholder="Brief description of how Aerologix can help you"></textarea>
+                <div class="fontHel" *ngIf="description.errors && (description.dirty || description.touched)">
+                  <p class="errorClass" *ngIf="description.errors.required">Description is mandatory</p>
+                </div>
+            </div>
+          </div>
+          <!-- Grd row -->
+
+          <div class="fontHel" *ngIf="successFlag">
+            <p class="successClass">Thank you for contacting us. We will be with you shortly.</p>
+          </div>
+
+          <div class="form-row flex-center">
+            <button type="button" class="btn btn-primary fontHel adButton" [disabled]="myform.invalid" (click)="submitHandler()" >Submit</button>
+          </div>
+
+          <!-- <pre style="color: azure;">{{myform.valid | json}}</pre> -->
+        </form>
+        <!-- Default form row -->
+
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+
+
+</section>
